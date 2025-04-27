@@ -33,7 +33,19 @@ void drawString( const char* _string, uint32_t x = 5, uint32_t y = 5 );
 #define buttonB 11     // the number of the pushbutton pin
 
 #define INT_TEMP_SENSOR 0
+
+// pimoroni automation:bit
+// these are hardwired so be careful when combining other microbit accessories
+
 #define INT_RELAY_TRIGGER 16 // hardwired for pimoroni automation bit
+#define INT_DIGITAL_OUT_ONE 14
+#define INT_DIGITAL_OUT_TWO 15
+#define INT_DIGITAL_IN_ONE 8
+#define INT_DIGITAL_IN_TWO 13
+#define INT_ANALOG_ONE 2
+#define INT_ANALOG_TWO 1
+#define INT_ANALOG_THREE 0
+
 
 // Declaration for an SSD1306 display connected to I2C (SDA, SCL pins)
 // The pins for I2C are defined by the Wire-library.
