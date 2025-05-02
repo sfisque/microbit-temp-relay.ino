@@ -24,6 +24,7 @@
 #define buttonB 11     // the number of the pushbutton pin
 
 #define INT_TEMP_SENSOR 0
+#define INT_TEMP_THRESHHOLD 25
 
 #define INT_RELAY_TRIGGER 1 
 
@@ -68,7 +69,7 @@ void loop()
     {
         uint32_t celsius = analogRead( INT_TEMP_SENSOR ) * 300 / 1023;
 
-        output = (int) ( celsius / 33 ) | button_press;
+        output = (int) ( celsius / INT_TEMP_THRESHHOLD ) | button_press;
 
         microbit.println( (int) output );
 
